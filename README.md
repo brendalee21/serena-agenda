@@ -5,6 +5,42 @@ Sistema web simples de gestão de eventos, desenvolvido como projeto de extensã
 O sistema foi pensado para profissionais que atuam com organização, decoração e planejamento de eventos, permitindo o controle de clientes e agendamentos de forma prática e intuitiva.
 
 ---
+## Preview do Sistema
+
+### Início
+
+<p aligin="center">
+    <img src="images/inicio.JPG"
+width="700">
+</p>
+
+### Dashboard
+
+<p aligin="center">
+    <img src="images/dashboard.JPG"
+width="700">
+</p>
+
+### Clientes
+
+<p aligin="center">
+    <img src="images/clientes.JPG"
+width="700">
+</p>
+
+### Eventos
+
+<p aligin="center">
+    <img src="images/eventos.JPG"
+width="700">
+</p>
+
+### Detalhes
+
+<p aligin="center">
+    <img src="images/detalhes.JPG"
+width="700">
+</p>
 
 ## 📌 Objetivo do Projeto
 
