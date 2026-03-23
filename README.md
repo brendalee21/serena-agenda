@@ -9,7 +9,7 @@ O sistema foi pensado para profissionais que atuam com organização, decoraçã
 
 <p aligin="center">
   <a href>="https://serenaagenda.netlify.app/">
-     <strong> Acessar Sistema Online</
+     <strong>Clique Aqui</
 strong>
   </a>
 </p>
