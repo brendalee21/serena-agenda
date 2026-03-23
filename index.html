@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Serena Agenda</title>
+<title>Serena Eventos</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -17,11 +17,10 @@
 
     <div class="login-box">
 
-        <h1>Serena Agenda</h1>
-        <p>Bem-vinda ao seu espaço de cuidado terapêutico.</p>
+        <h1>Serena Eventos</h1>
+        <p>Gestão inteligente de eventos</p>
 
         <input id="user" type="text" placeholder="Usuário">
-
         <input id="pass" type="password" placeholder="Senha">
 
         <button onclick="login()">Entrar</button>
@@ -37,10 +36,10 @@
 
 <header>
 
-<h1>Serena Agenda</h1>
+<h1>Serena Eventos</h1>
 
 <p class="frase">
-"A arte abre caminhos onde as palavras não chegam. Cada sessão é um espaço de cuidado e transformação."
+"Organizar é transformar sonhos em experiências inesquecíveis."
 </p>
 
 <nav>
@@ -49,9 +48,9 @@
 
 <button onclick="showSection('clientes')" class="nav-btn">Clientes</button>
 
-<button onclick="showSection('agenda')" class="nav-btn">Agenda</button>
+<button onclick="showSection('agenda')" class="nav-btn">Eventos</button>
 
-<button onclick="showSection('prontuario')" class="nav-btn">Arte Prontuário 🔒</button>
+<button onclick="showSection('eventos')" class="nav-btn">Detalhes 🔒</button>
 
 </nav>
 
@@ -66,12 +65,12 @@
 
 <div class="card">
 <h2 id="semana">0</h2>
-<p>Sessões na semana</p>
+<p>Eventos na semana</p>
 </div>
 
 <div class="card">
 <h2 id="mes">0</h2>
-<p>Sessões no mês</p>
+<p>Eventos no mês</p>
 </div>
 
 <div class="card">
@@ -79,7 +78,16 @@
 <p>Total de clientes</p>
 </div>
 
+<div class="card">
+<h2 id="faturamento">R$ 0</h2>
+<p>Faturamento total</p>
 </div>
+
+</div>
+<button onclick="gerarDadosFake()"
+class="btn-main">Gerar Dados de Teste   
+</button>
+<div id="graficoFake"></div></div>
 
 </section>
 
@@ -95,12 +103,8 @@
 <div class="form-grid">
 
 <input id="nome" placeholder="Nome">
-
 <input id="telefone" placeholder="Telefone">
-
 <input id="email" placeholder="Email">
-
-<input id="obs" placeholder="Observação">
 
 </div>
 
@@ -108,54 +112,67 @@
 
 </div>
 
-
 <input id="busca" placeholder="Buscar cliente..." onkeyup="buscarCliente()">
-
 
 <ul id="listaClientes"></ul>
 
 </section>
 
 
-<!-- AGENDA -->
+<!-- EVENTOS (AGENDA) -->
 
 <section id="agenda" class="section hidden">
 
 <div class="card-form">
 
-<h2>Nova sessão</h2>
+<h2>Novo Evento</h2>
 
 <div class="form-grid">
 
 <input id="clienteSessao" placeholder="Nome do cliente">
-
 <input id="dataSessao" type="date">
 
+<select id="tipoEvento">
+<option>Casamento</option>
+<option>Aniversário</option>
+<option>Infantil</option>
+<option>Corporativo</option>
+</select>
+
+<input id="localEvento" placeholder="Local do evento">
+
+<input id="valorEvento" type="number" placeholder="Valor (R$)">
+
+<select id="statusEvento">
+<option>Pendente</option>
+<option>Confirmado</option>
+<option>Finalizado</option>
+</select>
+
 </div>
 
-<button onclick="addSessao()" class="btn-main">Agendar</button>
+<button onclick="addSessao()" class="btn-main">Cadastrar Evento</button>
 
 </div>
-
 
 <ul id="listaAgenda"></ul>
 
 </section>
 
 
-<!-- PRONTUÁRIO -->
+<!-- DETALHES DO EVENTO -->
 
-<section id="prontuario" class="section hidden">
+<section id="eventos" class="section hidden">
 
 <div class="card-form">
 
-<h2>Arte Prontuário 🔒</h2>
+<h2>Detalhes do Evento 🔒</h2>
 
-<p>Espaço reservado para anotações terapêuticas.</p>
+<p>Registre briefing, preferências e observações do cliente.</p>
 
-<textarea id="textoProntuario" placeholder="Registre suas observações da sessão..."></textarea>
+<textarea id="textoEventos" placeholder="Ex: Tema, cores, decoração, itens necessários..."></textarea>
 
-<button onclick="salvarProntuario()" class="btn-main">Salvar</button>
+<button onclick="salvarEventoCadastrado()" class="btn-main">Salvar</button>
 
 </div>
 
